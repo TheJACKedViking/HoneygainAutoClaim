@@ -1,5 +1,5 @@
 # Builder Image
-FROM cgr.dev/chainguard/python:latest-dev@sha256:1317aa66fec4b9735101d38df69c9fc1cc1e8e045ec1d11ddaa2e976005e2b60 as builder
+FROM cgr.dev/chainguard/python:latest-dev@sha256:cc6f7a1e53f7c803f2ec8013eedb89a35f61e23de44b067661f8a317f93e423e as builder
 
 ENV PATH="/app/venv/bin:$PATH"
 
@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 
 # End container image
-FROM cgr.dev/chainguard/python:latest@sha256:87bd6a67a50c5aa1f9b03b38d1c914594248310778d0e055c48c9cb00613cb06
+FROM cgr.dev/chainguard/python:latest@sha256:c73e2dcefb8e97860ab0c0b374758df9b4938f023b56a1298526a645f6e6be51
 
 WORKDIR /app
 ENV PATH="/venv/bin:$PATH"
